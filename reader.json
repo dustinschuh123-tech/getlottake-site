@@ -1,0 +1,19 @@
+{
+ "v": 1,
+ "features": [
+  {"match": ["m carbon roof", "carbon fiber roof", "carbon-fiber roof", "carbon roof"], "line": "It has a carbon-fiber roof, which keeps the weight down low."},
+  {"match": ["m sport differential", "active m differential"], "line": "The M Sport differential helps it put the power down coming out of corners."},
+  {"match": ["m drive professional"], "line": "M Drive Professional adds a lap timer and the M Drift Analyzer for track days."},
+  {"match": ["adaptive m suspension"], "line": "Adaptive M suspension goes from comfortable to track-ready at the push of a button."},
+  {"match": ["m carbon bucket"], "line": "The M Carbon bucket seats hold you in like a race car."},
+  {"match": ["m carbon ceramic"], "line": "It has M carbon-ceramic brakes."},
+  {"match": ["m compound brakes", "m sport brakes"], "line": "It has M Sport brakes, so it stops as hard as it goes."},
+  {"match": ["carbon fiber trim", "carbon fibre trim"], "line": "Inside, it has real carbon-fiber trim."},
+  {"match": ["m shadowline lights"], "line": "The M Shadowline headlights give the front a darker, meaner look."},
+  {"match": ["m seat belts", "m seatbelts"], "line": "Even the seat belts have the M stripes woven in."}
+ ],
+ "skip": [],
+ "platforms": {},
+"cloudWriter": true,
+"cloudWriterStores": ["mckennabmw.com"]
+}
