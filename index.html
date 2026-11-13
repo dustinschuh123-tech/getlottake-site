@@ -362,6 +362,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
 .pk.on::before{content:"✓";background:var(--coral);border-color:var(--coral);color:#fff}
 
 /* Showroom: the app's own screens, then the scoreboard */
+.why{padding-block:88px 8px}
+.why-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:44px;width:100%;max-width:880px}
+.why-stats div{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px 20px;display:flex;flex-direction:column;gap:8px}
+.why-stats b{font-size:clamp(34px,4.6vw,52px);font-weight:700;line-height:1;color:var(--sky)}
+.why-stats span{font-size:15px;color:var(--ink-2)}
+.why-src{font-size:12px;color:var(--ink-2);margin-top:18px}
+@media(max-width:720px){.why-stats{grid-template-columns:1fr}}
 .look{padding-block:88px 40px}
 .shots{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px;margin-top:52px;width:100%}
 .shot{margin:0;display:flex;flex-direction:column;gap:14px;text-align:left}
@@ -460,6 +467,20 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
 </header>
 
 <main>
+  <section class="why" id="why">
+    <div class="wrap center">
+      <div class="kicker">Why it works</div>
+      <h2 class="h2">Most stores own a video tool. Almost nobody films.</h2>
+      <p class="sub">Sales consultants skip video for one reason: they don't know what to say on camera. LotTake writes it for the exact car and the exact customer, so the hard part is done before they hit record.</p>
+      <div class="why-stats">
+        <div><b>49%</b><span>of dealerships have sales staff sending personal videos</span></div>
+        <div><b>7</b><span>videos in 10 months at one store that already owned a video tool</span></div>
+        <div><b>87.5%</b><span>of that store's customers engaged once every lead got a video</span></div>
+      </div>
+      <p class="why-src">Sources: CDK Global 2026 Friction Points Study; Car Dealership Guy News, December 2025.</p>
+    </div>
+  </section>
+
   <section class="look" id="look">
     <div class="wrap center">
       <div class="kicker">Built for the lot</div>
@@ -619,25 +640,24 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
             <div class="mode f" id="mFull"><span class="mi"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></span><b>Full Tour</b><small>~2 min · every detail</small></div>
           </div>
           <div class="pk-count"><span id="pkCount">5</span> talking points</div>
+          <div class="pk-group">Overview</div>
+          <div class="pk on" data-q="1">375 horsepower, and zero to sixty in 5.8 seconds.</div>
+          <div class="pk">Only 4,212 miles on this one.</div>
           <div class="pk-group">Outside</div>
-          <div class="pk on" data-q="1">Check out these 19" M Y-Spoke Bicolor wheels.</div>
-          <div class="pk">It only has 4,212 miles on it.</div>
-          <div class="pk-group">Under the hood</div>
-          <div class="pk on" data-q="1">It makes 375 horsepower.</div>
-          <div class="pk">Zero to sixty in 5.8 seconds.</div>
+          <div class="pk on" data-q="1">Those are the 19-inch M Y-Spoke Bicolor wheels.</div>
           <div class="pk-group">Inside</div>
-          <div class="pk on" data-q="1">Inside, it's Red/Black Bicolor Perforated Veganza.</div>
-          <div class="pk on" data-q="1">It has a heated steering wheel.</div>
-          <div class="pk">The dash has Illuminated Aluminum Graphite Trim.</div>
+          <div class="pk on" data-q="1">Let's hop inside. Red and Black Veganza, perforated.</div>
+          <div class="pk on" data-q="1">The steering wheel is heated.</div>
+          <div class="pk">Illuminated Aluminum Graphite trim runs across the dash.</div>
           <div class="pk-group">Fun fact</div>
-          <div class="pk on fact" data-q="1">The 3 Series debuted in 1975 and is now in its seventh generation.</div>
+          <div class="pk on fact" data-q="1">The 3 Series debuted in 1975. This is the seventh generation.</div>
         </div>
       </div>
 
       <div class="grid">
         <div><h4>Sends every time</h4><p>Works with your dealership's texting tool or iMessage. Long videos get a one-tap "Make it fit" that keeps them 1080p and under the limit.</p></div>
         <div><h4>Follow my voice</h4><p>The teleprompter listens and scrolls as you talk. No speed to fiddle with.</p></div>
-        <div><h4>Written for this customer</h4><p>Say or type who the video is for and the script is rewritten around them. Or just tap what they care about and how you want to close.</p></div>
+        <div><h4>Written for this customer</h4><p>Say or type who the video is for and the script is rewritten around them. Or just tap what they care about and how you want to close. In English or Español.</p></div>
         <div><h4>Text ready to send</h4><p>A personal message with the car and stock # is ready after every take. Edit it, copy it, or share it with the video.</p></div>
         <div><h4>Follow up in one tap</h4><p>Your recent customers are on the home screen. Tap one to film a follow-up with everything filled in.</p></div>
         <div><h4>Reference mode</h4><p>Rather riff? Get a quick cheat sheet: Exterior, Under the hood, Interior, Tech, Fun facts.</p></div>
@@ -675,7 +695,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
 <script>
 const CARS = {
   "911": { title:"2025 Porsche 911 GTS",
-    lines:["Hey Sarah, here's the Carmine Red 911 Carrera GTS we talked about.", "The headlights shape the high beams around other cars.", "These are 20-inch wheels up front and wider 21s in back.", "That light bar runs the full width of the car.", "This is the first hybrid 911 ever. Porsche calls it T-Hybrid.", "Out back is a 3.6-liter flat-six with an electric motor.", "Together they make 532 horsepower.", "Zero to sixty takes 2.9 seconds.", "The turbo is electric, so there's basically no lag.", "Let's hop inside. It's Black Race-Tex in here.", "The start button's on the left, a nod to Le Mans.", "You've got a 12.6-inch curved gauge cluster.", "Plus wireless CarPlay on the center screen.", "There's a trunk up front for a weekend bag.", "Fun fact: the hybrid battery is about the size of a regular car battery.", "Want to drive it? Text me and I'll pull it up front."] },
+    lines:["Hey Sarah, here's the Carmine Red 911 Carrera GTS we talked about.", "This is the first hybrid 911 ever. Porsche calls it T-Hybrid.", "Out back is a 3.6-liter flat-six with an electric motor.", "Together they make 532 horsepower.", "Zero to sixty takes 2.9 seconds.", "The turbo is electric, so there's basically no lag.", "The headlights shape the high beams around other cars.", "These are 20-inch wheels up front and wider 21s in back.", "That light bar runs the full width of the car.", "Let's hop inside. It's Black Race-Tex in here.", "The start button's on the left, a nod to Le Mans.", "You've got a 12.6-inch curved gauge cluster.", "Plus wireless CarPlay on the center screen.", "There's a trunk up front for a weekend bag.", "Fun fact: the hybrid battery is about the size of a regular car battery.", "Want to drive it? Text me and I'll pull it up front."] },
   "pilot": { title:"2026 Honda Pilot Touring",
     lines:["Hey Sarah, here's the Sonic Gray Pearl Pilot Touring we talked about.", "The liftgate is powered, so it opens when your hands are full.", "Under the hood is a 3.5-liter V6 with 285 horsepower.", "It's all-wheel drive, and you can tow up to 5,000 pounds.", "Adaptive cruise and lane keeping are standard.", "Let's hop inside.", "The front seats and the second row are heated.", "You've got wireless CarPlay and a wireless charger up front.", "There's a 12-speaker Bose sound system.", "And a panoramic moonroof.", "The middle seat in the second row comes out and stores under the cargo floor.", "Fun fact: Honda's first car was a little T360 pickup in 1963.", "Want me to hold it for you? Just text me back."] },
   "xc90": { title:"2026 Volvo XC90",
